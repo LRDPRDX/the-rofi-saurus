@@ -18,3 +18,9 @@ start_key="Alt+s"
 ```
 
 provided those aren't used by rofi. Actually, <kbd>Esc</kbd> should be sufficient for exit :smile:
+
+# Acknowledgements & similar projects
+
+- the `thesaurus.txt` file was obtained from [here](https://github.com/vim/vim/issues/629)
+- select a word and get its definition with rofi : [here](https://gist.github.com/Amooti73/9dac66ffee26f93baf211ab8c05949cd)
+- inspired by projects from [here](https://github.com/davatorium/rofi/wiki/User-scripts)
