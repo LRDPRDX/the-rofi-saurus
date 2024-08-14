@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-readonly t_file=$HOME/projects/therofisaurus/thesaurus.txt
+readonly t_file=$HOME/projects/the-rofi-saurus/thesaurus.txt
 
 escape_key="Escape"
 exit_key="Alt+q"
@@ -16,10 +16,12 @@ do_rofi="rofi -kb-custom-1 ${exit_key} -kb-custom-2 ${start_key} -dmenu -p"
 function check_output() {
     local code=${1}
     local result=${2}
-    if [[ ${code} -eq 10 ]]; then
+    if [[ ${code} -eq 10 ]]; then # exit_key was pressed
         exit
-    elif [[ ${code} -eq 11 ]]; then
+    elif [[ ${code} -eq 11 ]]; then # start_key was pressed
         return 1
+    elif [[ ${code} -ne 0 ]]; then # other codes are for errors
+        exit
     fi
 
     if [[ -z ${result} ]]; then
